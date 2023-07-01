@@ -1,0 +1,34 @@
+npm install -g yarn
+
+emmet pulgin - autocomplete (writing title and tab)
+
+yarn global add live-server
+
+live-server public
+
+CDN script src
+react
+https://unpkg.com/react@16.0.0/umd/react.development.js
+react-dom (to render to dom)
+https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js
+
+Check in developer Console on browser variables React, ReactDOM. It will be defined.
+
+babeljs.io
+
+var template = <h1>This is JSX from app.js!></h1>
+
+var template = React.createElement(
+    "h1", 
+    {id: "someid"},
+    "Something New"
+);
+
+babel is a compiler, needs plugins and presets
+presets - react, env(es6, es7 features)
+
+yarn global add babel-cli@6.24.1
+npm install -g babel-cli@6.24.1
+
+yarn init
+yarn add babel-preset-react@6.24.1 babel-preset-env@6.24.1
