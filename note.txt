@@ -4,6 +4,7 @@ emmet pulgin - autocomplete (writing title and tab)
 
 yarn global add live-server
 
+command to start live server
 live-server public
 
 CDN script src
@@ -61,3 +62,41 @@ var template = (
 Dynamic data
 object - {app.title}
 variable - {title}
+
+undefined , boolean, null are ignored by JSX
+
+var based variable can be reassigned as well as redefined
+let based variable can be reassigned but not redefined
+const based variable cannot be reassigned or redefined
+
+var variable are function scoped. const and let are also same. 
+const and let are also block scoped but var is not.
+
+If doesn't reassign then use const, else use let
+
+es6 arrow function are annonymous, we need to assign to variable
+
+arguments keyword no longer available in arrow function
+
+this keyword - no longer bound in es5 function inside function, but work in arrow function
+but arrow function not to be used in object property defination. 
+New synatx for method defination
+onst user = {
+    name: 'Andrew',
+    cities: ['Philadelphia', 'New York', 'Dublin'],
+    printPlacesLived(){
+        this.cities.forEach((city) => {
+            console.log(this.name + ' has lived in ' + city);
+        })
+    }
+};
+
+map helps transform getting a new array back, unlike in forEach we can only perform something
+
+Some property like id remain same while some like class is className in JSX
+
+JSX does not have built in data binding
+
+Need to rerender for dynamic display
+
+React is super efficient, it has dom algorithm to correctly render with only the minimum change. (Elements tab rerender highlight)
