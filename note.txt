@@ -100,3 +100,25 @@ JSX does not have built in data binding
 Need to rerender for dynamic display
 
 React is super efficient, it has dom algorithm to correctly render with only the minimum change. (Elements tab rerender highlight)
+
+----Forms and inputs----
+Synthetic Events
+Form Events
+
+Handling client side javascript
+
+To prevent full page reload on form submit event
+e.preventDefault();
+
+Just reference don't call, or it will try to use return value
+
+To get the submitted value, option here is element name
+e.target.elements.option.value
+
+-----Arrays in JSX-----
+For arrays of JSX we need to add key prop
+
+comment in Jsx {/* comment */}
+
+-----Picking an option-----
+Math.random() - generates a random number between 0 & 1, can be multiplied to increase range
