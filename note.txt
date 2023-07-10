@@ -122,3 +122,32 @@ comment in Jsx {/* comment */}
 
 -----Picking an option-----
 Math.random() - generates a random number between 0 & 1, can be multiplied to increase range
+
+-----Thinking in react-----
+React components
+<IndecisionApp />
+	<Header />
+	<Action />
+	<Options />
+		<Options />
+	<AddOption />
+
+-----Classes-----
+Commonly start with uppercase
+
+`` backtocks for templates
+
+-----Subclasses-----
+extend
+super to call parent class contructor
+
+-----Component-----
+React.Component has to define a render method
+For React component use capital class name starting
+React component is like a custom html element inside jsx
+
+-----Component Props-----
+props - pass data in when we initialize an insatance of our component
+this - reference to the current instance of this component and react gives us access to our props on an object i.e this.props
+
+For map, key needs to be passed for component as well.
