@@ -200,3 +200,16 @@ Can be used when rendering
 Changes cause re-renders
 Defined in component itself
 Can be changed by component itself
+
+-----Stateless functional component------
+Doesn't allow state but allow props
+Doesn't have access to this
+Also variable start with capital
+
+Advantage
+Faster than class based components
+
+If just has a render function only without state, use Stateless functional component
+
+-----defaultProps------
+It is object where we can specify various props that we want to give a default value to.
