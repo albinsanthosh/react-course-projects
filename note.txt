@@ -151,3 +151,52 @@ props - pass data in when we initialize an insatance of our component
 this - reference to the current instance of this component and react gives us access to our props on an object i.e this.props
 
 For map, key needs to be passed for component as well.
+
+-----Method binding-----
+method are not able to use this
+
+As the context of the object is not passed
+
+To fix .bind is used
+.bind({ name: 'Andrew' })
+
+To search more search mdn bind
+
+We will use bind while override the Component constructor
+
+-----Component state-----
+component state allows our components to manage some data. Ans when that data changes, the component will automatically render to reflect those changes.
+
+5 step
+1. Setup default state object
+2. Component rendered with default state values
+3. Change sate based on event.
+4. Component re-rendered using new state values
+5. Start again at 3
+
+this.setState(update function) - allow us to manipulate that state object and then we done manipulating, we going to see the component refresh automatically.
+call to setState are asynchronous
+use update function
+
+-----Indecision state-----
+pass data upstream child to parent
+pass functions as prop to children
+
+When parent pass new prop values the child will render
+
+mdn concat for array
+
+-----Props vs State-----
+Props
+An object
+Can be used when rendering
+Changes (from above) cause re-renders
+Comes from above
+Can't be changed by component itself
+
+State
+An object
+Can be used when rendering
+Changes cause re-renders
+Defined in component itself
+Can be changed by component itself
