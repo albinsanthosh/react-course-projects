@@ -213,3 +213,41 @@ If just has a render function only without state, use Stateless functional compo
 
 -----defaultProps------
 It is object where we can specify various props that we want to give a default value to.
+
+-----React dev tools------
+React developement tools
+
+implicitly return object
+this.setState(() => ({ options: [] }));
+
+array.filter(func return true those will be in array)
+
+-----LifeCycle methods-----
+on class based component it works
+componentDidMount
+componentDidUpdate - component updates 
+this,state, this.props, prevProps, prevState
+componentWillUnmount for cleanup
+
+Run this in console, it will remove the prev component to test componentWillUnmount
+ReactDOM.render(React.createElement('p'), document.getElementById('app'));
+
+---localstorage---
+localStorage.setItem('name', 'Andrew');
+localStorage.getItem('name');
+localStorage.remove('name');
+localStorage.clear();
+
+persist with page loads
+only work with string data, converts number to strings
+
+For arrays and object we can use json
+const json = JSON.stringify({ age: 26 });
+JSON.parse(json);
+
+base 10
+parseInt(num, 10)
+
+NaN
+isNaN()
+
