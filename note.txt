@@ -346,3 +346,15 @@ Add in webpack.config.js
 Add .babelrc in root folder
 
 -----one component per file-----
+copy component part in a component folder
+import React
+setup other import if needed
+export default class/const
+import in app.js
+
+-----source map for webpack-----
+sourcemap config in webpack.config.js
+devtool: 'cheap-module-eval-source-map'
+
+whenever we change webpack.config.js, we have to restart
+
