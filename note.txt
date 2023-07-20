@@ -40,7 +40,6 @@ For compiling of jsx
 babel src/app.js --out-file=public/scripts/app.js --presets=env,react
 
 Automaticaly recompile in case of change
-babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 
 node_modules can be deleted and regenerated
 command to regenerate
@@ -251,3 +250,99 @@ parseInt(num, 10)
 NaN
 isNaN()
 
+-----Webpack-----
+When we run app through webpack we are going to get a single JavaScript file, called bundle.
+It breaks down into island and communicate using es6 syntax.
+
+public/
+src/ - app.js
+node_modules/
+
+dependencies defined inside app.js
+After running we get a single file called bundle.js in public folder
+
+Avoid global variables
+Tools like babel, live-server installed globally, might create issue for other users.
+If different project are created, they all will need to use same version of babel and live-server.
+we need to type out the command
+
+
+steps
+1. uninstall babel and live-server
+yarn global remove babel-cli live-server 
+npm uninstall -g babel-cli live-server 
+
+2. install locally
+yarn add live-server babel-cli@6.24.1
+
+3. add scripts in package.json
+"scripts": {
+    "serve": "live-server public/",
+    "build": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch"
+},
+
+4. in cmd 
+yarn run serve
+yarn run build
+
+-----Installing & configuring webpack-----
+yarn add webpack@3.1.0
+
+Add in scripts in package.json
+"build": "webpack",
+
+create webpack.config.js in root of the folder (node related)
+// entry -> output
+
+configuration inside module.exports
+resource - webpack.js.org
+
+command to check console.log by run
+node webpack.config.js 
+
+getting absolute path
+path.join(__dirname, 'public');
+
+delete scripts directory inside public
+
+remove the script for react in index.html
+
+For app to refresh on change, in package.json, in scripts, for build
+"build": "webpack --watch", 
+
+----ES6 import/export -----
+exports
+default export
+one default value
+any name can be used while import
+import in begining outside {}
+
+export default subtract;
+OR
+export { square, add, subtract as default };
+
+named export
+export { square, add };
+OR
+export const square = (x) => x * x;
+
+-----import npm modules ------
+install-> import -> use
+
+search for npm validator
+yarn add validator@8.0.0
+
+search for npm react, react-dom
+yarn add react@16.0.0 react-dom@16.0.0
+
+-----loader-----
+customize the behavior of webpack when it loads a file
+
+yarn add babel-core@6.25.0 babel-loader@7.1.1
+babel-core for webpack
+babel-loader for webpack to teach to load file
+
+Add in webpack.config.js
+Add .babelrc in root folder
+
+-----one component per file-----
