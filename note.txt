@@ -358,3 +358,55 @@ devtool: 'cheap-module-eval-source-map'
 
 whenever we change webpack.config.js, we have to restart
 
+-----Dev server-----
+yarn add webpack-dev-server@2.5.1
+
+Add devServer in webpack.config.js file
+devServer: {
+        contentBase: path.join(__dirname, 'public')
+    }
+
+dev server loads the bundle.js in memory so it doesn't  use the physical file
+
+If we delete bundle.js we need to get the physical file by running
+yarn run build
+
+-----Es6 class properties-----
+Babel - Stage 2 preset - Transform
+yarn add babel-plugin-transform-class-properties@6.24.1
+
+Add plugins in .babelrc
+"plugins": [
+        "transform-class-properties"
+    ]
+
+1. pull the state out of constructor
+2. convert all 4 event handlers to class properties (arrow functions)
+3. delete the constructor completely
+4. start with class properties and end with method
+
+class NewSyntax {
+    name='Jen';
+    getGreeting = () => {
+        return `Hi. My name is ${this.name}.`;
+    }
+}
+const newSyntax = new NewSyntax();
+const newGetGreeting = newSyntax.getGreeting;
+console.log(newGetGreeting());
+
+-----Passing children to component-----
+ReactDOM.render((
+<Layout>
+    <div>
+        <h1>Page Title</h1>
+        <p>This is my page</p>
+    </div>
+</Layout>
+), document.getElementById('app'));
+
+for calling
+{props.children}
+
+-----react-Modal-----
+yarn add react-modal@2.2.2
