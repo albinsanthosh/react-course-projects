@@ -410,3 +410,89 @@ for calling
 
 -----react-Modal-----
 yarn add react-modal@2.2.2
+
+-----SCSS------
+css-loader
+style-loader - based on Javascript code it will get the styles
+
+yarn add style-loader@0.18.2 css-loader@0.28.4
+
+use allows us to use an array of loader
+
+webpack.config.js changes in module
+
+sass-lang.com
+sass - without semicolon or braces
+SCSS - with semicolon or braces
+
+webpack.config.js changes in module for SCSS
+
+import in app.js
+
+yarn add sass-loader@6.0.6 node-sass@4.5.3
+used
+yarn add sass-loader@6.0.6 node-sass
+
+webpack.config.js changes in module for sass-loader
+
+-----Architecture & headre styles-----
+styles/base/_base.scss
+styles/styles.scss
+
+For entry point we create like styles.scss
+When we create separate file that's going to get loaded in, its known as partial. Partial start with underscore
+
+16px
+62.5% setting in html
+16*625 = 10
+1 rem = 10px
+
+styles/components/_header.scss
+
+BEM block element modifier
+to use inside element of block
+.header__title
+
+getbem.com
+
+-----Reset-----
+To starting applying our styles from the scratch for every browser
+
+yarn add normalize.css@7.0.0
+
+add in app.js before our styles
+import 'normalize.css/normalize.css';
+
+add ? in webpack.config.js
+/\.s?css$/
+
+-----Themimg our variables-----
+In styles.scss before other styles
+@import './base/settings';
+
+sass reference function
+border-bottom: .6rem solid darken($purple, 10%);
+darken
+
+for modifier we use --
+.button--link
+
+to use
+className="button button--link"
+
+-----Styling Option Item-----
+props.options.map((option, index)
+
+in styles.scss import partials import in alphabetical order
+
+----Styling React-Modal-----
+ReactModal__Body--open
+ReactModalPortal
+ReactModal__Overlay ReactModal__Overlay--after-open
+ReactModal__Content ReactModal__Content--after-open (contains our content)
+
+.ReactModalPortal > div (This is directing only the div elements)
+
+closeTimeoutMS={200} (closing the modal after 200ms)
+
+word-break: break-all; (For UI to break long word into words)
