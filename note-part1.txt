@@ -496,3 +496,22 @@ ReactModal__Content ReactModal__Content--after-open (contains our content)
 closeTimeoutMS={200} (closing the modal after 200ms)
 
 word-break: break-all; (For UI to break long word into words)
+
+----Mobile considerations-----
+index.html
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+mediaqueries
+_add-option.scss
+@media (min-width: 45rem){
+ .add-option {
+        flex-direction: row;
+    }
+}
+_button.scss, _header.scss
+
+----Favicon-----
+\indecision-app\public\images
+
+index.html
+<link rel="icon" type="image/png" href="/images/favicon.png" />
