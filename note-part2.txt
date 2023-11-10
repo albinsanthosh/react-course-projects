@@ -1,0 +1,9 @@
+Expensify-app
+
+update in 
+
+package.json
+"name": "expensify-app",
+
+public\index.html title as
+expensify-app
