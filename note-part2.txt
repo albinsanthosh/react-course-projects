@@ -7,3 +7,27 @@ package.json
 
 public\index.html title as
 expensify-app
+
+-----React Router 101-----
+
+https://reactrouter.com/en/main
+
+react-router-dom for webapp
+
+yarn add react-router-dom@4.2.2
+
+app.js
+import { BrowserRouter, Route} from "react-router-dom"
+
+BrowserRouter expect only one child element, use div to add more inside
+
+For client side routing, we handle all 404 & serve index.html
+
+in webpack.config.js in devserver
+add this 
+historyApiFallback: true
+
+& restart dev-server
+
+It will start showing both component as it satify any matching routes
+use exact={true} prop in route
