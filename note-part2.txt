@@ -31,3 +31,45 @@ historyApiFallback: true
 
 It will start showing both component as it satify any matching routes
 use exact={true} prop in route
+
+-----Setting up a 404-----
+
+create a component for NotFound
+
+Switch
+Check if previous conditions match, if match it will stop there & display that only else it will continue if no match found. 
+
+-----Link between Routes-----
+No need for refresh page using client side routing
+
+Link
+<Link to="/">Go home</Link>
+
+NavLink similar to Kunk but mainly for navigation
+
+activeClassName="is-active"
+when we are on that Link
+
+NavLink also similar to route, we need to use exact.
+
+-----Organizing our Routes-----
+src\routers\AppRouter
+
+-----Query strings & url Parameters-----
+prop objects
+history (redirects)
+match -> params
+location (current url)
+-> search (query string like ?query=rent&sort=date)
+-> hash (#contact-us scroll to element that have id of this)
+
+dynamically access value
+in AppRouter.js
+<Route path="/edit/:id" component={EditExpensePage}/>
+
+creates match -> params -> id
+
+in index.html
+<script src="/bundle.js"></script>
+
+props are passed to component in these Routes mentioned.
