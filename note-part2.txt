@@ -73,3 +73,41 @@ in index.html
 <script src="/bundle.js"></script>
 
 props are passed to component in these Routes mentioned.
+
+-----Redux-----
+Manage state as our application grow in size
+
+Issues
+Not one Parent 
+they need to keep track of data
+
+component closely bound with Parent
+cannot be used elsewhere
+
+Where do i store my app state in a complex React app?
+How do I create components that are actually reusable?
+
+Redux Store
+a property with array values with items
+get & store data
+e.x.
+{
+	expenses: [{
+		_id: 'abc',
+		description: 'rent',
+		amount: 109500
+	}]
+}
+-----Setting up Redux-----
+playground/redux-101.js
+
+webpack.config.js
+entry: './src/playground/redux-101.js',
+
+website for help
+redux.js.org
+
+yarn add redux@3.7.2
+
+import { createStore } from 'redux';
+
