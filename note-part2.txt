@@ -111,3 +111,46 @@ yarn add redux@3.7.2
 
 import { createStore } from 'redux';
 
+-----Actions-----
+Actions - It is an object that gets sent to the store
+
+convention
+Action type is written in capital letter (underscore can be used)
+
+-----Subscribing & Dynamic Actions-----
+
+store.subscribe(() => {
+});
+Its gets called everytime the store changes 
+
+return value we get is unsubcribe, if we call it then further we will not be notified for state changes
+
+const unsubscribe = store.subscribe(() => {
+    console.log(store.getState());
+});
+
+store.dispatch({
+    type: 'INCREMENT',
+    incrementBy: 5
+});
+
+unsubscribe();
+
+-----ES6 Object destructing---
+
+destructing.js
+
+in webpack.config.js
+entry: './src/playground/destructing.js',
+
+object destructing
+const { name, age } = person;
+
+renaming
+const { city, temp: temperature } = person.location;
+
+set default value
+const { name = 'Anonymous', age } = person;
+
+renaming & set default value
+const { name: firstName = 'Anonymous', age } = person;
