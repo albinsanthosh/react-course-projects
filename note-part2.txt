@@ -154,3 +154,13 @@ const { name = 'Anonymous', age } = person;
 
 renaming & set default value
 const { name: firstName = 'Anonymous', age } = person;
+
+-----ES6 Array destructing---
+
+const address = ['1299 S Juniper Street', 'Philadelphia', 'Pennsylvania', '19147'];
+
+const [, city, state = 'New York'] = address;
+
+-----Refracting & Organizing---
+
+Action generators - functions that return action objects
