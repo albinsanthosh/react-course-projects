@@ -164,3 +164,11 @@ const [, city, state = 'New York'] = address;
 -----Refracting & Organizing---
 
 Action generators - functions that return action objects
+
+-----Reducers---
+Reducers are functions that take the current state and an action as arguments, and return a new state result. In other words, (state, action) => newState.
+
+1. Reducers are pure functions 
+(output depends on the input, does not change variables outside the scope).
+2. Never change state or action
+
