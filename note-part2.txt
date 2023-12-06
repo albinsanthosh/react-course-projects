@@ -172,3 +172,18 @@ Reducers are functions that take the current state and an action as arguments, a
 (output depends on the input, does not change variables outside the scope).
 2. Never change state or action
 
+combineReducers 
+
+-----ES6 Spread operator in Reducers---
+uuid for generating unique id
+yarn add uuid@3.1.0
+
+names.concat('Julie')
+concat returns a new array, doesn't edit the old names array
+
+[...names, 'Mike']
+Also returns new array with the change.
+...names = all of the existing items in the array
+
+state.filter return new array with subset of values.
+state.filter(({ id }) => id !== action.id);
