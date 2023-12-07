@@ -187,3 +187,28 @@ Also returns new array with the change.
 
 state.filter return new array with subset of values.
 state.filter(({ id }) => id !== action.id);
+
+-----Spreading objects---
+Getting all the properties of the object
+
+Spreding object syntax is not yet in mainstream, so we need to customize babel configuration.
+
+babel object spread operator
+plugin-transform-object-rest-spread
+
+yarn add babel-plugin-transform-object-rest-spread@6.23.0
+{
+  "plugins": ["transform-object-rest-spread"]
+}
+
+const user = {
+    name: 'Jen',
+    age: 24
+}
+
+console.log({
+    ...user,
+    location: 'Philadelphia',
+    age: 27
+});
+
