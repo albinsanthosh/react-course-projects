@@ -212,3 +212,13 @@ console.log({
     age: 27
 });
 
+-----Filtering Redux Data---
+timestamps (milliseconds)
+January 1st 1970 (unix epoch) (midnight)
+33400, 10, -203
+
+case insensitive search
+expense.description.toLowerCase().includes(text.toLowerCase())
+
+-----Sorting Redux Data---
+arr.sort(compareFunction)
