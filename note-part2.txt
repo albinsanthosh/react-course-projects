@@ -222,3 +222,45 @@ expense.description.toLowerCase().includes(text.toLowerCase())
 
 -----Sorting Redux Data---
 arr.sort(compareFunction)
+
+-----Organizing Redux---
+src\selectors
+src\actions
+src\selectors
+src\reducers
+
+src\actions\expenses.js
+src\actions\filters.js
+
+src\reducers\expenses.js
+src\reducers\filters.js
+
+src\selectors\expenses.js
+
+src\store\configureStore.js
+
+-----The Higher Order Component---
+
+src\playground\hoc.js
+
+Higher Order Component (HOC)
+A component that renders another component
+
+Advantages is 
+Reuse code
+Render hijacking
+Prop manipulation
+Abstract state
+
+const withAdminWarning = (WrappedComponent) => {
+    return (props) => (
+
+    );
+};
+
+const AdminInfo = withAdminWarning(Info);
+
+using function to create a HOC
+
+<WrappedComponent {...props}/>
+Using spread operator to get all properties of the HOC
