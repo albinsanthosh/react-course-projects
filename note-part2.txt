@@ -264,3 +264,23 @@ using function to create a HOC
 
 <WrappedComponent {...props}/>
 Using spread operator to get all properties of the HOC
+
+-----Connect Store & Component with React-Redux---
+search google for react-redux
+
+yarn add react-redux@5.0.5
+
+1. Provider component
+To provide the store to all other components that make up our application.
+
+2. connect api
+Connect your component to redux store
+
+const mapStateToProps = (state) => {
+    return {
+        expenses: state.expenses,
+        filters: state.filters
+    };
+};
+
+export default connect(mapStateToProps)(ExpenseList);
