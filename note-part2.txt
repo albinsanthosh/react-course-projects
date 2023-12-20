@@ -288,3 +288,31 @@ export default connect(mapStateToProps)(ExpenseList);
 -----Rendering individual expenses---
 
 maps - takes in array, returns an edited array
+
+-----Creating Add Expense Form-----
+
+e.target.value gives error if used in callback function directly, it must be stored in a variable or
+
+e.persist() to be used before
+
+Regular expression helper site
+https://regex101.com/
+
+/
+^\d*(\.\d{0,2})?$
+/
+g
+^ asserts position at start of the string
+\d matches a digit (equivalent to [0-9])
+* matches the previous token between zero and unlimited times, as many times as possible, giving back as needed (greedy)
+1st Capturing Group (\.\d{0,2})?
+? matches the previous token between zero and one times, as many times as possible, giving back as needed (greedy)
+\. matches the character . with index 4610 (2E16 or 568) literally (case sensitive)
+\d matches a digit (equivalent to [0-9])
+{0,2} matches the previous token between 0 and 2 times, as many times as possible, giving back as needed (greedy)
+$ asserts position at the end of the string, or before the line terminator right at the end of the string (if any)
+Global pattern flags 
+g modifier: global. All matches (don't return after first match)
+
+match(/regular expression/)
+e.x. amount.match(/^\d*(\.\d{0,2})?$/)
