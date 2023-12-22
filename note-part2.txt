@@ -316,3 +316,30 @@ g modifier: global. All matches (don't return after first match)
 
 match(/regular expression/)
 e.x. amount.match(/^\d*(\.\d{0,2})?$/)
+
+-----Setting up a date Picker-----
+moment.js - time library
+
+airbnb react-dates library
+SingleDatePicker
+
+yarn add moment@2.18.1 react-dates@12.7.0 react-addons-shallow-compare@15.6.0
+
+react-addons-shallow-compare@15.6.0 - dependency for react-dates
+
+import { SingleDatePicker } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css'
+
+with css library
+
+<SingleDatePicker 
+                        date={this.state.createdAt}
+                        onDateChange={this.onDateChange}
+                        focused={this.state.calenderFocused}
+                        onFocusChange={this.onFocusChange}
+                        numberOfMonths={1}
+                        isOutsideRange={() => false}
+                    />
+
+numberOfMonths={1} - for showing 1 month only
+isOutsideRange={() => false} - for selecting all dates
