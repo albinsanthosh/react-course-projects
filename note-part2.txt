@@ -343,3 +343,16 @@ with css library
 
 numberOfMonths={1} - for showing 1 month only
 isOutsideRange={() => false} - for selecting all dates
+
+-----Wiring up add expense-----
+amount.match(/^\d{1,}(\.\d{0,2})?$/)
+To add atleast one digit before decimal
+
+onSubmit of form
+onSubmit = (e) => {
+        e.preventDefault();
+    }
+to prevent default behaviour of full page refresh
+
+history.push() programmatically change the pages
+props.history.push('/')
