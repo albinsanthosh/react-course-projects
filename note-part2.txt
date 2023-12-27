@@ -356,3 +356,14 @@ to prevent default behaviour of full page refresh
 
 history.push() programmatically change the pages
 props.history.push('/')
+
+-----Wiring up edit expense-----
+Template string in Link as id is dynamic
+<Link to={`/edit/${id}`}>
+	<h3>{description}</h3>
+</Link>
+
+// Dispatch the action to edit the expense
+// Redirect to the dashboard
+props.dispatch(editExpense(props.expense.id, expense));
+props.history.push('/')
