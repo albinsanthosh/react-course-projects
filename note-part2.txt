@@ -367,3 +367,43 @@ Template string in Link as id is dynamic
 // Redirect to the dashboard
 props.dispatch(editExpense(props.expense.id, expense));
 props.history.push('/')
+
+-----Redux developer tool-----
+search redux developer tool extension
+
+https://github.com/zalmoxisus/redux-devtools-extension
+
+copy paste the one line from github desc to 
+store\configureStore.js inside createStore as argument
+
+It records and shows the actions.
+
+-----Filtering by dates-----
+src\reducers\filters.js
+startDate: moment.startOf('month'),
+endDate: moment.endOf('month')
+
+Filter to see from start of month to end of month
+
+src\components\ExpenseListFilters.js
+state = {
+        calenderFocused: null
+    };
+
+We changed from function based to class based component.
+We need to add this.props to props
+
+<DateRangePicker 
+                    startDate={this.props.filters.startDate}
+                    endDate={this.props.filters.endDate}
+                    onDatesChange={this.onDatesChange}
+                    focusedInput={this.state.calenderFocused}
+                    onFocusChange={this.onFocusChange}
+                    showClearDates={true}
+                    numberOfMonths={1}
+                    isOutsideRange={() => false}
+                />
+
+src\selectors\expenses.js
+startDate.isSameOrBefore(createdAtMoment, 'day')
+if the startDate is same day or before createdAtMoment.
