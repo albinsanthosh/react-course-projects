@@ -407,3 +407,39 @@ We need to add this.props to props
 src\selectors\expenses.js
 startDate.isSameOrBefore(createdAtMoment, 'day')
 if the startDate is same day or before createdAtMoment.
+
+-----Setting up jest-----
+serach google
+jest testing
+
+https://jestjs.io/docs/getting-started
+
+yarn add jest@20.0.4
+
+package.json
+scripts
+"test": "jest"
+
+yarn run test
+or
+yarn test
+
+create folder
+src\tests
+
+**create file
+add.test.js
+src\tests\add.test.js
+
+test(<name>, <code to run for the testcase>)
+
+expect(result).toBe(7)
+
+watch mode
+package.json
+scripts
+"test": "jest --watch"
+
+or commandline form
+yarn test -- --watch
+(everthing before -- is for yarn & after is for jest)
