@@ -443,3 +443,13 @@ scripts
 or commandline form
 yarn test -- --watch
 (everthing before -- is for yarn & after is for jest)
+
+-----Testing Expenses Action Generator-----
+
+toEqual()
+to check objects
+it check the properties if equal or not
+e.x. arrays & objects
+
+expect.any()
+just check to object type, dont care about the value
