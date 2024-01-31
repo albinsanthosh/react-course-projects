@@ -455,3 +455,9 @@ expect.any()
 just check to object type, dont care about the value
 
 -----Testing Filters Action Generator-----
+
+-----Testing Expenses selector-----
+
+moment(0).subtract(4, 'days').valueOf()
+
+moment(0).add(4, 'days').valueOf()
