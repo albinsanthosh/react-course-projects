@@ -461,3 +461,6 @@ just check to object type, dont care about the value
 moment(0).subtract(4, 'days').valueOf()
 
 moment(0).add(4, 'days').valueOf()
+
+-----Testing Expense Reducers-----
+Fixture - test data, dummy data
