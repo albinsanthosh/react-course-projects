@@ -464,3 +464,73 @@ moment(0).add(4, 'days').valueOf()
 
 -----Testing Expense Reducers-----
 Fixture - test data, dummy data
+
+-----Snapshot testing-----
+react-test-renderer
+allows us to render components in regular javascript code.
+
+yarn add react-test-renderer@16.0.0
+
+import ReactShallowRenderer from 'react-test-renderer/shallow';
+
+shallow render renders current component only
+full dom render render child component also
+
+renderer.getRenderOutput()
+
+toMatchSnapshot()
+expect(renderer.getRenderOutput()).toMatchSnapshot()
+stores a snapshot in __snapshot__ folder
+For 1st time it stores as it is. For 2nd time it compares the changes.
+To accept the changes we need to press u 
+
+-----Enzyme-----
+More widely used tool than react-test-renderer. By airbnb.io/enzyme
+
+1. Install
+yarn add enzyme@3.0.0 enzyme-adapter-react-16@1.0.0 raf@3.3.2
+
+raf (request-animation-frame)
+
+2. setup file
+tests/setupTest.js
+import Enzyme from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16'
+
+Enzyme.configure({
+    adapter: new Adapter()
+});
+
+3. Jest configuration to run setup file
+<root>/jest.config.json
+{
+    "setupFiles": [
+        "raf/polyfill",
+        "<rootDir>/src/tests/setupTests.js"
+    ]
+}
+
+4. In package.json add the config file
+test: jest --config=jest.config.json
+
+.find(selector)
+to find the selector elements
+
+.text()
+to get text
+
+To make enzyme for snapshot testing, add a utility library
+enzyme-to-json
+
+yarn add enzyme-to-json@3.0.1
+
+toJson()
+stores what we require in snapshot
+
+To automatically use JSON serializer
+Add below to jest.config.json
+{
+	"snapshotSerializers": [
+		"enzyme-to-json/serializer"
+	]
+}
