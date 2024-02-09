@@ -534,3 +534,6 @@ Add below to jest.config.json
 		"enzyme-to-json/serializer"
 	]
 }
+
+-----Snapshot testing with dynamic components-----
+export named ExpenseList, default will be used for normal unconnected store version
