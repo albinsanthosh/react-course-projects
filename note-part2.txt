@@ -537,3 +537,11 @@ Add below to jest.config.json
 
 -----Snapshot testing with dynamic components-----
 export named ExpenseList, default will be used for normal unconnected store version
+
+-----Mocking libraries with jest-----
+https://jestjs.io/docs/manual-mocks
+
+Create a mock directory as __mock__ in test
+moment.js inside
+
+const moment = require.requireActual('moment');
