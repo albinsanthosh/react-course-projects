@@ -545,3 +545,17 @@ Create a mock directory as __mock__ in test
 moment.js inside
 
 const moment = require.requireActual('moment');
+
+-----Testing User Interaction-----
+.simulate()
+
+-----Test Spies-----
+They are fake functions
+
+jest.fn()
+.toHaveBeenCalled()
+.toHaveBeenCalledTimes()
+.toHaveBeenCalledWith()
+.toHaveBeenLastCalledWith()
+
+wrapper.find('SingleDatePicker').prop('onDateChange')
