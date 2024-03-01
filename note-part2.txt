@@ -559,3 +559,12 @@ jest.fn()
 .toHaveBeenLastCalledWith()
 
 wrapper.find('SingleDatePicker').prop('onDateChange')
+
+-----Testing AddExpensePage-----
+afterAll(fn)
+afterEach(fn)
+beforeAll(fn)
+beforeEach(fn)
+
+-----Testing ExpenseListFilters-----
+.setProps({name: 'bar'})
