@@ -1,0 +1,172 @@
+git init
+git status
+
+.gitignore
+
+git add package.json
+
+git add .
+
+git commit -m "Initial commit"
+
+// shows the commits we made
+git log
+
+readme.md
+-----Setting up SSH and Github-----
+ls -a ~/.ssh
+-a hidden files
+~ user directory
+
+Search connecting to Github using ssh
+
+ssh-keygen -t rsa -b 4096 -C "albin.santhosh98@gmail.com"
+
+eval "$(ssh-agent -s)"
+
+ssh-add ~/.ssh/id_rsa
+
+clip < ~/.ssh/id_ed25519.pub
+# Copies the contents of the id_ed25519.pub file to your clipboard
+
+Add the ssh key to Github ssh & GPG keys area
+
+ssh -T git@github.com
+check connection
+
+copy the gihub ssh url
+
+git remote add origin git@github.com:andrewjmead/react
+
+git remote
+git remote -v
+
+git push -u origin main
+
+---- Production Webpack -----
+https://webpack.js.org/guides/production/
+
+different type of source map used
+
+file changed - package.json, webpack.config.js
+
+package.json
+"build:prod": "webpack -p --env production",
+
+webpack.config.js
+const isProduction = env === 'production';
+devtool: isProduction ? 'source-map':'cheap-module-eval-source-map',
+
+build
+yarn run build:prod
+serve
+npm run serve
+
+---- Creating separate CSS files -----
+
+extract-text-webpack-plugin
+
+yarn add extract-text-webpack-plugin@3.0.0
+
+webpack.config.js changes
+
+For dev source-map change as does not show styles exact location
+cheap-module-eval-source-map to inline-source-map
+
+'css-loader', 'sass-loader' changed to enable sourcemap option
+
+---- Production webserver with Express -----
+/server
+server.js
+
+expressjs.com
+
+yarn add express@4.15.4
+
+yarn run build:prod
+node server/server.js
+
+app.get used to load /create get request
+(to load index.html for any request that is not matching)
+
+----- Deploying with Heroku ------
+similar to AWS Beanstalk, DigitalOcean
+
+
+npm install -g heroku
+
+heroku --version
+
+heroku login
+
+heroku create react-course-2-expensify
+
+git remote -v
+
+It needs start script in package.json
+
+dynamic port value
+uses environment variable
+
+how to start webpack
+custom scripts
+
+git commit the changes
+
+git push heroku master
+
+heroku open
+
+heroku logs
+
+-----Regular vs Development Dependencies-----
+yarn add chalk --dev
+
+adds in the devDependencies in package.json
+
+Put all dev dependencies in here.
+
+yarn install --production
+
+yarn install
+
+publicPath property in devServer section in webpack config.
+
+yarn run dev-server
+
+yarn run build:prod
+yarn run start
+
+Adds and commits modified files only not new files
+git commit -am "Setup devDependencies and dist folder"
+
+git push
+
+----- New Feature Workflow -----
+www.momentjs.com/docs/#/displaying/
+
+moment(createdAt).format('MMMM Do, YYYY')
+January 1st, 1970
+
+Numeraljs
+numeraljs.com
+
+yarn add numeral@2.0.6
+
+numeral(amount / 100).format('$0,0.00')
+$1.95
+
+reduce
+const array1 = [1, 2, 3, 4];
+
+// 0 + 1 + 2 + 3 + 4
+const initialValue = 0;
+const sumWithInitial = array1.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue,
+);
+
+console.log(sumWithInitial);
+// Expected output: 10
+
+TestDrivenDevelopment

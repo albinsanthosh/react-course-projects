@@ -1,0 +1,20 @@
+firebase.google.com
+database, authentication
+
+rules 
+read, wirte set to true
+
+Add firebase to web app
+config object used
+
+yarn add firebase@4.2.0
+
+src\firebase\firebase.js
+
+import * as firebase from 'firbase';
+dumps all the named exports to variable firebase
+
+Add import in app.js
+import './firebase/firebase'
+
+----- Writing to the Database -----
