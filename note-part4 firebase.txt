@@ -18,3 +18,46 @@ Add import in app.js
 import './firebase/firebase'
 
 ----- Writing to the Database -----
+.ref()
+Gives a reference to database
+reference to the root of database
+
+.set()
+to set the value
+overwrite
+
+database.ref('age').set(27);
+access only age
+
+database.ref('location/city').set('New York');
+access location/city
+
+The set sends a request to change the data.
+
+----- E6 Promises -----
+resolve - Everthying went well
+reject - There is something wrong
+
+Call back registered in promise.then.
+resolve data can be printed.
+
+Resolve or reject single time.
+
+When reject, use .catch() block
+
+resolve - then()
+reject - catch()
+
+promise.then((data) => {
+    console.log('1', data);
+}).catch((error) => {
+    console.log('error', error);
+});
+
+Instead of writing catch, we can use it as 2nd argument of then also. 
+
+promise.then((data) => {
+    console.log('1', data);
+}, (error) => {
+    console.log('error', error);
+});
