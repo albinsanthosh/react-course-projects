@@ -61,3 +61,93 @@ promise.then((data) => {
 }, (error) => {
     console.log('error', error);
 });
+
+----- Removing from database -----
+database.ref('isSingle').remove().then(() => {
+    console.log('Data was removed');
+}).catch((e) => {
+    console.log('Did not remove data', e);
+})
+
+passing set as null behaves as remove
+database.ref('isSingle').set(null);
+
+documentation
+https://firebase.google.com/docs/reference/js/database.md?authuser=0&hl=en#functions
+
+----- Updating data -----
+database.ref().update({
+    stressLevel: 9,
+    'job/company': 'Amazon',
+    'location/city': 'Seattle'
+});
+
+Normall update at root level
+For child level need use quotes and /
+Supports promises
+
+----- Fetching Data from Firebase -----
+2 ways
+Fetch single time
+Fetch subscription based
+
+once 
+returns snapshot
+
+on
+subscribe to changes
+use callback function
+
+to unsubscribe
+off
+database.ref().off(onValueChange);
+
+----- Array data in Firebase -----
+push
+generate id and add data
+
+DataSnapshot
+https://firebase.google.com/docs/reference/js/database.datasnapshot?hl=en&authuser=0
+
+events
+child_removed
+child_changed
+child_added(for existing as well as new data)
+
+----- Asynchronous Redux Actions -----
+Previous
+// components calls action generator
+// action generator returns object
+// component dispatches object
+// redux store changes
+
+Changed
+// components calls action generator
+// action generator returns fucntion
+// component dispatches fucntion (?)
+// function runs (has the ability to dispatch other actions and do whatever it wants)
+
+dispatch function
+redux-thunk
+
+yarn add redux-thunk@2.2.0
+
+import applyMiddleware from redux
+
+src\store\configureStore.js
+src\firebase\firebase.js
+src\actions\expenses.js
+src\components\AddExpensePage.js
+
+For testing
+redux-mock-store
+yarn add redux-mock-store@1.2.3
+
+Promise chaining
+
+For wait till call reaches till done() moment.
+done argument
+done()
+
+getActions
+clearActions
